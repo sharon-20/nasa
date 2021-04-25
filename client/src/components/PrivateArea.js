@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal'
 import NavBarComponent from './NavBarComponent';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/Card'
+import './PrivateArea.css'
 
 const PrivateArea = (props) => {
     const [urlInput, setUrleInput] = useState("")
@@ -77,6 +78,7 @@ const PrivateArea = (props) => {
     }
     // const firebase = useFirebase()
     return (
+
         <div >
             <NavBarComponent></NavBarComponent>
             <div className="d-flex justify-content-center">
@@ -87,6 +89,7 @@ const PrivateArea = (props) => {
                 <Button onClick={getMyUploads}>get my Uploads</Button>
 
             </div>
+
             <Modal show={show} onHide={() => setShow(false)} animation={false}>
                 <Modal.Header closeButton>
                     <Modal.Title >Add New Image</Modal.Title>
@@ -106,7 +109,7 @@ const PrivateArea = (props) => {
                     <Button variant="secondary" onClick={() => setShow(false)}>
                         Close
                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Save Changes
                    </Button>
                 </Modal.Footer>
